@@ -174,10 +174,10 @@ pnpm build
 
 ## 公众号
 
-微信搜索 **苍何** 或扫描下方二维码关注公众号。后续 Codex 教程、AI 工程化实践和开源项目更新会持续同步。
+微信搜索 **苍何** 或扫描下方二维码关注公众号。关注后回复 **codex交流群**，即可进入群交流。
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/main/data/images/%E5%85%AC%E4%BC%97%E5%8F%B7.png" alt="苍何微信公众号" width="260" />
+  <img src="./assets/wechat-codex-group.png" alt="关注苍何公众号后回复 codex交流群 进入群交流" width="820" />
 </p>
 
 ## 事实来源
