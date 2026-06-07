@@ -58,6 +58,16 @@ redirectFrom:
 - 检查当前账号计划和组织策略。
 - 查看官方 Help Center 的 Codex 相关文章。
 
+## Windows 桌面 App / CLI 专项排障
+
+如果问题发生在 Windows 桌面 App、Microsoft Store / winget 安装、Windows sandbox、Worktree、Browser / Computer Use 插件、WSL 混合路径或 PowerShell 环境，可以参考社区维护的 Windows 专项排障库：
+
+- [Community Codex Windows Troubleshooting](https://github.com/toby-bridges/community-codex-windows-troubleshooting)
+- [Windows Codex Error Guide](https://github.com/toby-bridges/community-codex-windows-troubleshooting/blob/main/WINDOWS-CODEX-ERROR-GUIDE.md)
+- [Dogfood Matrix](https://github.com/toby-bridges/community-codex-windows-troubleshooting/blob/main/DOGFOOD-MATRIX.md)
+
+这个项目会把 Windows 报错按证据等级、复现等级和 workaround 状态整理，并提供只读诊断脚本。提交日志、截图或诊断输出前，请先脱敏用户名、路径、私有仓库名、token 和账号信息。
+
 ## 切换 provider 后旧会话不可见
 
 可能原因：
