@@ -14,6 +14,8 @@ const addMeta = (
   head.push(["meta", { [attribute]: name, content }]);
 };
 
+const isHomePage = (path: string): boolean => path === "/" || path === "/index.html";
+
 export default hopeTheme({
   hostname: `${siteUrl}/`,
   logo: "/logo.svg",
@@ -76,27 +78,82 @@ export default hopeTheme({
         "og:image:alt": `${page.title} - CodexGuide`,
         "og:locale": "zh_CN",
       }),
-      jsonLd: (jsonLD, page) => ({
-        ...jsonLD,
-        description: getPageDescription(page.path),
-        url: toSiteUrl(page.path),
-        image: [siteOgImage],
-        inLanguage: "zh-CN",
-        isPartOf: {
-          "@type": "WebSite",
-          name: "CodexGuide",
-          url: `${siteUrl}/`,
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "CodexGuide",
-          url: `${siteUrl}/`,
-          logo: {
-            "@type": "ImageObject",
-            url: `${siteUrl}/logo.svg`,
-          },
-        },
-      }),
+      jsonLd: (jsonLD, page) =>
+        isHomePage(page.path)
+          ? {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": `${siteUrl}/#organization`,
+                  name: "CodexGuide",
+                  url: `${siteUrl}/`,
+                  logo: {
+                    "@type": "ImageObject",
+                    url: `${siteUrl}/logo.svg`,
+                  },
+                  sameAs: ["https://github.com/freestylefly/CodexGuide"],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": `${siteUrl}/#website`,
+                  name: "CodexGuide",
+                  alternateName: ["OpenAI Codex 中文教程", "Codex 教程"],
+                  url: `${siteUrl}/`,
+                  description: getPageDescription(page.path),
+                  inLanguage: "zh-CN",
+                  publisher: {
+                    "@id": `${siteUrl}/#organization`,
+                  },
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: `${siteUrl}/?search={search_term_string}`,
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+                {
+                  "@type": ["LearningResource", "Course"],
+                  "@id": `${siteUrl}/#codex-course`,
+                  name: "CodexGuide：OpenAI Codex 中文教程与实战指南",
+                  url: `${siteUrl}/`,
+                  description: getPageDescription(page.path),
+                  image: [siteOgImage],
+                  inLanguage: "zh-CN",
+                  educationalLevel: "Beginner to Intermediate",
+                  teaches: [
+                    "Codex 桌面 App 使用",
+                    "Codex CLI 安装与登录",
+                    "OpenAI Codex 配置",
+                    "AGENTS.md 项目规则",
+                    "Codex 实战案例",
+                  ],
+                  provider: {
+                    "@id": `${siteUrl}/#organization`,
+                  },
+                },
+              ],
+            }
+          : {
+              ...jsonLD,
+              description: getPageDescription(page.path),
+              url: toSiteUrl(page.path),
+              image: [siteOgImage],
+              inLanguage: "zh-CN",
+              isPartOf: {
+                "@type": "WebSite",
+                name: "CodexGuide",
+                url: `${siteUrl}/`,
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "CodexGuide",
+                url: `${siteUrl}/`,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteUrl}/logo.svg`,
+                },
+              },
+            },
       customHead: (head, page) => {
         const description = getPageDescription(page.path);
         const title = `${page.title} | CodexGuide`;

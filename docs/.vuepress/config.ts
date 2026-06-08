@@ -1,8 +1,31 @@
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 
-import { getPageDescription, siteDescription } from "./seo.js";
+import { getPageDescription, siteDescription, toSiteUrl } from "./seo.js";
 import theme from "./theme.js";
+
+const rewriteSitemapCleanUrlsPlugin = {
+  name: "codexguide-clean-sitemap-urls",
+  onGenerated: (app) => {
+    const sitemapPath = app.dir.dest("sitemap.xml");
+
+    if (!existsSync(sitemapPath)) return;
+
+    const sitemap = readFileSync(sitemapPath, "utf-8");
+    const cleanedSitemap = sitemap.replace(
+      /<loc>(https:\/\/codexguide\.ai[^<]*)<\/loc>/gu,
+      (_, url: string) => {
+        const { pathname, search, hash } = new URL(url);
+
+        return `<loc>${toSiteUrl(`${pathname}${search}${hash}`)}</loc>`;
+      },
+    );
+
+    writeFileSync(sitemapPath, cleanedSitemap);
+  },
+};
 
 export default defineUserConfig({
   base: "/",
@@ -19,7 +42,7 @@ export default defineUserConfig({
       {
         name: "keywords",
         content:
-          "CodexGuide,Codex,OpenAI Codex,Codex CLI,AGENTS.md,AI 编程,AI Agent,工作流,实践指南,Codex guide",
+          "CodexGuide,Codex 教程,Codex教程,OpenAI Codex 中文教程,Codex 使用教程,Codex CLI 教程,Codex 桌面 App,AGENTS.md,AI 编程,AI Agent,工作流,实战指南",
       },
     ],
     ["meta", { name: "theme-color", content: "#0f766e" }],
@@ -31,11 +54,10 @@ export default defineUserConfig({
     {
       name: "codexguide-seo-defaults",
       extendsPage: (page) => {
-        if (!page.frontmatter.description) {
-          page.frontmatter.description = getPageDescription(page.path);
-        }
+        page.frontmatter.description = getPageDescription(page.path);
       },
     },
+    rewriteSitemapCleanUrlsPlugin,
   ],
 
   bundler: viteBundler(),

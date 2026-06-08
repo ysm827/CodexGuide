@@ -1,9 +1,28 @@
 export const siteUrl = "https://codexguide.ai";
 
 export const siteDescription =
-  "CodexGuide 系统整理 Codex 桌面 App、CLI、IDE、Cloud、Skills 与真实案例，帮助中文用户从入门到团队落地。";
+  "CodexGuide 是面向中文用户的 OpenAI Codex 教程，系统整理 Codex 桌面 App、CLI、IDE、Cloud、配置、Skills、AGENTS.md 和实战案例。";
 
 export const siteOgImage = `${siteUrl}/og.svg`;
+
+export const toCleanPath = (path: string): string => {
+  const [pathname, suffix = ""] = path.split(/(?=[?#])/u);
+  let cleanPath = pathname || "/";
+
+  if (cleanPath === "/index.html") return `/${suffix}`;
+
+  if (cleanPath.endsWith("/index.html")) {
+    cleanPath = cleanPath.slice(0, -"index.html".length);
+  } else if (cleanPath.endsWith(".html")) {
+    cleanPath = cleanPath.slice(0, -".html".length);
+  }
+
+  if (cleanPath.length > 1 && cleanPath.endsWith("/")) {
+    cleanPath = cleanPath.slice(0, -1);
+  }
+
+  return `${cleanPath}${suffix}`;
+};
 
 export const pageDescriptions: Record<string, string> = {
   "/": siteDescription,
@@ -12,7 +31,7 @@ export const pageDescriptions: Record<string, string> = {
   "/community/roadmap.html":
     "CodexGuide 共建路线图，记录文档站骨架、教程、案例、截图、关键词索引和社区传播的后续计划。",
   "/configuration/":
-    "Codex 配置与扩展总览，梳理 AGENTS.md、config.toml、Skills、MCP、Subagents、安全审批和团队配置路径。",
+    "Codex 配置教程总览，梳理 AGENTS.md、config.toml、Skills、MCP、Subagents、安全审批和团队配置路径。",
   "/configuration/cli-options.html":
     "Codex CLI 选项与命令指南，覆盖交互模式、非交互执行、恢复会话、Slash Commands 和常用启动参数。",
   "/configuration/config-file.html":
@@ -24,9 +43,9 @@ export const pageDescriptions: Record<string, string> = {
   "/guide/":
     "CodexGuide 学习路线目录，汇总入门准备、日常工作流、CLI、IDE、Cloud、AGENTS.md 和排障章节。",
   "/guide/00-overview.html":
-    "Codex 学习路线，从入口认知、任务闭环、工程化验证到团队沉淀，帮助新手建立完整使用路径并选择下一章。",
+    "Codex 教程学习路线，覆盖 OpenAI Codex 桌面 App、CLI、IDE、Cloud、任务闭环、配置和团队落地。",
   "/guide/01-app-installation.html":
-    "Codex 桌面 App 下载与安装教程，说明 macOS、Windows 安装入口、账号登录和首次启动前的准备工作。",
+    "Codex 桌面 App 安装教程，说明 macOS、Windows 下载入口、账号登录和第一次使用 OpenAI Codex 的准备工作。",
   "/guide/02-subscribe-plus.html":
     "ChatGPT Plus 与 Pro 订阅指南，整理 Codex 可用性、账号准备、支付路径和订阅前需要核对的信息。",
   "/guide/03-app-overview.html":
@@ -48,7 +67,7 @@ export const pageDescriptions: Record<string, string> = {
   "/guide/11-desktop-pet.html":
     "Codex 桌面形象设置教程，记录桌面展示效果、素材准备、配置步骤和适合个性化工作台的用法，便于识别任务状态。",
   "/guide/12-cli-installation.html":
-    "Codex CLI 安装与登录教程，覆盖 Node 环境、安装命令、版本检查、登录流程和首次运行准备。",
+    "Codex CLI 安装教程，覆盖 Node 环境、安装命令、版本检查、登录流程和第一次运行 OpenAI Codex CLI 的准备。",
   "/guide/13-cli-first-run.html":
     "第一次让 Codex CLI 改代码的教程，说明如何选择低风险任务、让 Codex 读仓库、修改文件并运行验证。",
   "/guide/14-ide-vscode.html":
@@ -62,7 +81,7 @@ export const pageDescriptions: Record<string, string> = {
   "/guide/18-troubleshooting.html":
     "Codex 排障手册，汇总登录、安装、权限、依赖、命令失败和任务执行异常的定位与恢复路径，帮助快速继续工作。",
   "/platform/":
-    "Codex 入口地图，比较 CLI、桌面 App、Cloud、IDE、ChatGPT 和集成生态，帮助选择合适工作入口。",
+    "Codex 使用教程入口地图，比较 CLI、桌面 App、Cloud、IDE、ChatGPT 和集成生态，帮助选择合适工作入口。",
   "/platform/app.html":
     "Codex 桌面 App 入口说明，介绍本地项目、多任务、Skills、Automations、插件和桌面工作台场景。",
   "/platform/chatgpt.html":
@@ -82,7 +101,7 @@ export const pageDescriptions: Record<string, string> = {
   "/practice/team-playbook.html":
     "Codex 团队实践指南，整理 AGENTS.md、PR、排障、知识库、任务模板和团队推广的协作方法。",
   "/recipes/":
-    "Codex 实战案例库，收录 PPT、Draw.io、Playwright、Obsidian、临床文献综述、Hatch Pet、安卓手机远程操控、飞书、Figma、Notion、CI 和远程排障案例。",
+    "Codex 实战教程案例库，收录 PPT、Draw.io、Playwright、Obsidian、临床文献综述、Hatch Pet、安卓手机远程操控、飞书、Figma、Notion、CI 和远程排障案例。",
   "/recipes/android-remote-control.html":
     "Codex 连接安卓手机教程，说明如何通过扫码将手机端 ChatGPT App 与电脑端 Codex 配对，实现移动端远程操控。",
   "/recipes/chrome-browser-plugin.html":
@@ -121,8 +140,27 @@ export const pageDescriptions: Record<string, string> = {
     "Codex 官方资料索引，汇总 OpenAI 产品页、Help Center、开发者文档、GitHub 仓库和安全配置资料。",
 };
 
-export const getPageDescription = (path: string): string =>
-  pageDescriptions[path] ?? siteDescription;
+export const getPageDescription = (path: string): string => {
+  const cleanPath = toCleanPath(path);
+  const htmlPath =
+    cleanPath === "/"
+      ? "/"
+      : cleanPath.endsWith("/")
+        ? `${cleanPath.slice(0, -1)}.html`
+        : `${cleanPath}.html`;
+  const directoryPath = cleanPath === "/" ? "/" : `${cleanPath}/`;
 
-export const toSiteUrl = (path: string): string =>
-  `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
+  return (
+    pageDescriptions[path] ??
+    pageDescriptions[cleanPath] ??
+    pageDescriptions[directoryPath] ??
+    pageDescriptions[htmlPath] ??
+    siteDescription
+  );
+};
+
+export const toSiteUrl = (path: string): string => {
+  const cleanPath = toCleanPath(path.startsWith("/") ? path : `/${path}`);
+
+  return `${siteUrl}${cleanPath}`;
+};
