@@ -28,6 +28,12 @@
   overflow: visible;
 }
 
+.vp-navbar-start,
+.vp-navbar-center,
+.vp-navbar-end {
+  min-width: 0;
+}
+
 .vp-site-name {
   font-size: 1.18rem;
   font-weight: 700;
@@ -65,8 +71,138 @@
   position: relative;
 }
 
+.vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="更多导航"]) {
+  display: none;
+}
+
 .vp-dropdown-title {
   gap: 0.15rem;
+}
+
+@media (max-width: 1700px) {
+  .vp-nav-links {
+    column-gap: 0.85rem;
+  }
+
+  .vp-site-name {
+    font-size: 1.05rem;
+  }
+
+  .vp-nav-item > .route-link,
+  .vp-dropdown-title {
+    font-size: 0.96rem;
+  }
+
+  .slimsearch-placeholder,
+  .slimsearch-key-hints {
+    display: none;
+  }
+
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="更多导航"]) {
+    display: block;
+  }
+
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 1520px) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="教程导航"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="资源导航"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  .vp-site-name {
+    max-width: 8.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1160px) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="配置导航"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .vp-nav-links > .vp-nav-item:has(> .route-link[href="/platform/"]) {
+    display: none;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 719px) {
+  .vp-navbar-center,
+  .vp-nav-links {
+    display: flex !important;
+  }
+
+  .vp-nav-links {
+    column-gap: 0.75rem;
+  }
+
+  .vp-nav-links > .vp-nav-item {
+    display: block !important;
+  }
+
+  .vp-nav-links > .vp-nav-item:has(> .route-link[href="/platform/"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="配置导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="资源导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="教程导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
+    display: none !important;
+  }
+
+  .vp-nav-item > .route-link,
+  .vp-dropdown-title {
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 680px) {
+  .vp-navbar-center,
+  .vp-nav-links {
+    display: flex !important;
+  }
+
+  .vp-nav-links {
+    column-gap: 0.7rem;
+  }
+
+  .vp-nav-links > .vp-nav-item {
+    display: block !important;
+  }
+
+  .vp-nav-links > .vp-nav-item:has(> .route-link[href="/guide/00-overview.html"]),
+  .vp-nav-links > .vp-nav-item:has(> .route-link[href="/platform/"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="配置导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="资源导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="教程导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]),
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
+    display: none !important;
+  }
+
+  .vp-nav-item > .route-link,
+  .vp-dropdown-title {
+    font-size: 0.9rem;
+  }
 }
 
 .vp-dropdown {
@@ -80,7 +216,10 @@
 }
 
 .vp-dropdown-wrapper:hover .vp-dropdown,
-.vp-dropdown-wrapper.open .vp-dropdown {
+.vp-dropdown-wrapper.open .vp-dropdown,
+.vp-dropdown-wrapper:focus-within .vp-dropdown {
+  visibility: visible;
+  opacity: 1;
   transform: none;
 }
 
