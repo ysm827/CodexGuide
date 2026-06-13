@@ -33,7 +33,8 @@ const guideItems = [
   { text: "15 AGENTS.md", icon: "file", link: "/guide/15-agents-md.md" },
   { text: "16 沙盒与审批", icon: "lock", link: "/guide/16-sandbox-approvals.md" },
   { text: "17 Codex Cloud：使用云端模式", icon: "cloud", link: "/guide/17-cloud-ide-app.md" },
-  { text: "18 排障手册", icon: "debug", link: "/guide/18-troubleshooting.md" },
+  { text: "18 Hooks", icon: "tool", link: "/guide/18-hooks.md" },
+  { text: "19 排障手册", icon: "debug", link: "/guide/19-troubleshooting.md" },
 ];
 
 const recipeItems = [
