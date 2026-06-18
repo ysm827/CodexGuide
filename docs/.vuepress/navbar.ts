@@ -63,7 +63,7 @@ const communityItems = [
 ];
 
 const sponsorItems = [
-  { text: "Unity2.ai", icon: "star", link: "https://unity2.ai/register?source=canghe" },
+  { text: "Unity2.ai", link: "https://unity2.ai/register?source=canghe" },
 ];
 
 export default navbar([
