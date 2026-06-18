@@ -5,7 +5,7 @@ description: "近期 Codex 更新中文摘要，依据 OpenAI 官方 Codex chang
 # 近期Codex更新
 
 :::: tip 最后核对
-官方资料最后核对日期：2026-06-11。本文依据 [OpenAI Codex changelog](https://developers.openai.com/codex/changelog) 整理，仅提供中文摘要和阅读索引；功能开放范围、账号计划、地区限制、模型可用性与版本号，请以官方原文为准。
+官方资料最后核对日期：2026-06-18。本文依据 [OpenAI Codex changelog](https://developers.openai.com/codex/changelog) 整理，仅提供中文摘要和阅读索引；功能开放范围、账号计划、地区限制、模型可用性与版本号，请以官方原文为准。
 ::::
 
 本页用于快速了解 Codex 近期变化，涵盖桌面 App、移动端、CLI、模型、插件、权限与远程控制等内容。为保持阅读清晰，本文自 2025 年起整理，并不逐项搬运官方 GitHub PR 清单。
@@ -32,6 +32,58 @@ description: "近期 Codex 更新中文摘要，依据 OpenAI 官方 Codex chang
 <h2 id="june-2026">2026 年 6 月</h2>
 
 [官方原文：June 2026](https://developers.openai.com/codex/changelog#month-2026-06)
+
+<article class="codex-update-entry">
+
+<p class="codex-update-date">2026-06-18</p>
+
+### Codex CLI <span class="codex-update-version">0.141.0</span>
+
+CLI 远程执行链路继续加强。remote executor 改用经过认证的端到端加密 relay，并在跨平台执行时保留 executor 原生的工作目录、shell 与权限路径。executor plugins 可按 thread 激活 stdio MCP，app-server 也补充了子线程列表、外部 agent import 结果关联，以及 rate-limit reset credits 的读取和兑换能力。
+
+本次更新还改进 realtime、TUI 输入请求和插件发现流程，并修复 hook trust、插件能力路由、Windows sandbox 凭据、SQLite 状态恢复、企业代理 TLS 兼容性等问题。大型工具会话也通过缓存和减少重复请求降低延迟与内存占用。
+
+</article>
+
+<article class="codex-update-entry">
+
+<p class="codex-update-date">2026-06-16</p>
+
+### EEA、UK 与 Switzerland 区域开放
+
+Codex app 在欧洲经济区、英国和瑞士开放更多能力。Computer Use 可用于 macOS 和 Windows，Codex Chrome extension 可处理需要已登录 Chrome 上下文的浏览器任务。Memories 也可在这些地区使用，用于记住偏好、常见工作流、技术栈和仓库约定，但默认关闭，需要用户主动启用。
+
+Chronicle 同步面向这些地区的 ChatGPT Pro macOS 用户提供 opt-in research preview，可基于近期屏幕上下文帮助 Codex 形成 memories。
+
+</article>
+
+<article class="codex-update-entry">
+
+<p class="codex-update-date">2026-06-15</p>
+
+### ChatGPT for iOS 与 Codex CLI <span class="codex-update-version">1.2026.160 / 0.140.0</span>
+
+iOS 端新增 workspace file browser、启动新 thread 时的目录选择、diff 展开 / 折叠控制、MCP approval 作用范围选择，以及 Codex 消息和 plan 中的 LaTeX rendering。本轮也改进了运行中 thread、side chat、subagent、profile、activity、settings 和 goal workflow 的显示与恢复体验。
+
+CLI 0.140.0 新增 `/usage` token activity 视图，并增强 `/goal` 对超大文本、粘贴内容和图片附件的保留能力。`codex delete`、`/delete` 与 app-server `thread/delete` 支持带确认保护的永久删除；`/import` 可导入 Claude Code 的 setup、project config 与 recent chats。认证侧加入 managed Amazon Bedrock API-key auth，并将 CLI 与 MCP OAuth 凭据放入本地加密存储。
+
+修复方面，CLI 改善了 SQLite state 重建、`/review`、MCP startup、OAuth 凭据提示、remote plugin uninstall 与后台命令处理。本版本也从 TUI 中移除了实验性的 `/realtime` 语音控制及相关音频依赖。
+
+</article>
+
+<article class="codex-update-entry">
+
+<p class="codex-update-date">2026-06-11</p>
+
+### Codex app <span class="codex-update-version">26.609</span>
+
+桌面端加入 rate-limit reset banking。Plus / Pro 用户可获得 launch 时的一次免费 reset，并可通过 referral invitations 继续获取；符合条件的 Business 成员也可邀请同事，为 workspace 获取共享 credits。Browser use 新增 Developer mode，可通过 Chrome DevTools Protocol 辅助性能、网络、console、runtime error 与页面状态调试。
+
+本次还把 `/init` 带进 app composer，支持自定义 macOS Dock icons，并为 EEA、UK、Switzerland 之外的 Enterprise 用户开放 Computer Use。Windows Computer Use 增加 per-app access controls；command menu 新增 Unread chats 区域。Browser use 通过 CDP 与 DOM snapshot 优化，官方标注最高可提速约 2 倍。
+
+修复与体验打磨覆盖插件管理、用量限制提示、approval feedback、Browser download / Developer mode recovery、scheduled automations、手动项目排序、Mobile QR pairing、remote-control MFA、SSH 连接和非默认缩放下的 overlay 定位等。
+
+</article>
 
 <article class="codex-update-entry">
 
