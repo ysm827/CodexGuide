@@ -69,7 +69,7 @@ const sponsorItems = [
 
 export default navbar([
   { text: "首页", icon: "home", link: "/" },
-  { text: "学习路线", icon: "map", link: "/guide/00-overview.md" },
+  { text: "教程", icon: "map", link: "/guide/00-overview.md" },
   {
     text: "实战案例",
     icon: "lightbulb",
@@ -78,7 +78,7 @@ export default navbar([
   },
   { text: "入口地图", icon: "layout", link: "/platform/" },
   {
-    text: "教程",
+    text: "教程目录",
     icon: "book",
     ariaLabel: "教程导航",
     children: guideItems,
