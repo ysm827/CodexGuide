@@ -540,6 +540,50 @@
   border-top: 3px solid #e11d48;
 }
 
+.community-tutorial-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.community-tutorial-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text);
+  text-decoration: none;
+}
+
+.community-tutorial-card:hover {
+  border-color: var(--vp-c-accent);
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+}
+
+.community-tutorial-card strong {
+  color: var(--vp-c-text);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.community-tutorial-card span {
+  margin-top: 0.6rem;
+  color: var(--vp-c-text-mute);
+  line-height: 1.75;
+}
+
+.community-tutorial-card em {
+  margin-top: 1rem;
+  color: var(--vp-c-accent);
+  font-size: 0.92rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
 .home-split {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);

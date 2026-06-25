@@ -190,6 +190,21 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 
 <section class="home-section">
 
+## 社区优秀教程合集
+
+CodexGuide 会持续收录社区维护的高质量 Codex 教程，方便你在官方资料、本站教程和开源长文之间交叉验证。
+
+<div class="home-case-grid">
+  <a class="home-case-card" href="/community/tutorials">
+    <strong>Codex 橙皮书</strong>
+    <span>从安装到实战案例的全链路 Codex 使用指南，提供在线阅读版、GitHub 仓库和 PDF。</span>
+  </a>
+</div>
+
+</section>
+
+<section class="home-section">
+
 ## 精选实战场景
 
 案例库是一组可改写的任务样本，重点是帮你迁移到自己的项目、工具、账号和验证方式。

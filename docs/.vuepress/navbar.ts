@@ -103,6 +103,7 @@ export default navbar([
     children: [
       { text: "配置", icon: "gear", link: "/configuration/" },
       { text: "资源", icon: "box", link: "/reference/" },
+      { text: "社区教程合集", icon: "book", link: "/community/tutorials.md" },
       { text: "教程", icon: "book", link: "/guide/01-app-installation.md" },
       { text: "交流群", icon: "message", link: "/community/roadmap.md" },
       { text: "赞助商", icon: "star", link: "https://unity2.ai/register?source=canghe" },
