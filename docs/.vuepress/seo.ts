@@ -30,6 +30,8 @@ export const pageDescriptions: Record<string, string> = {
     "CodexGuide 社区共建入口，整理路线图、贡献方向和内容认领方式，方便一起完善 Codex 中文实践知识库。",
   "/community/roadmap.html":
     "CodexGuide 共建路线图，记录文档站骨架、教程、案例、截图、关键词索引和社区传播的后续计划。",
+  "/community/tutorials.html":
+    "Codex 社区优秀教程合集，收录 Codex 橙皮书等社区开源教程、在线阅读资料和 PDF，方便延伸学习 OpenAI Codex 使用方法。",
   "/configuration/":
     "Codex 配置教程总览，梳理 AGENTS.md、config.toml、Skills、MCP、Subagents、安全审批和团队配置路径。",
   "/configuration/cli-options.html":

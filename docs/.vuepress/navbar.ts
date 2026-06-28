@@ -62,33 +62,39 @@ const communityItems = [
   { text: "关注苍何公众号，回复 codex交流群 进入群交流", icon: "message", link: "/community/roadmap.md" },
 ];
 
+const sponsorItems = [
+  { text: "Unity2.ai", link: "https://unity2.ai/register?source=canghe" },
+  { text: "PayForChat", link: "https://payforchat.com/register?ref=XJKHTC7N" },
+  { text: "Muskapi", link: "https://muskapi.com/register?utm_source=codexguide&utm_medium=website" },
+];
+
 export default navbar([
   { text: "首页", icon: "home", link: "/" },
-  { text: "学习路线", icon: "map", link: "/guide/00-overview.md" },
-  { text: "入口地图", icon: "layout", link: "/platform/" },
-  {
-    text: "配置",
-    icon: "gear",
-    ariaLabel: "配置导航",
-    children: configurationItems,
-  },
-  {
-    text: "资源",
-    icon: "box",
-    ariaLabel: "资源导航",
-    children: resourceItems,
-  },
-  {
-    text: "教程",
-    icon: "book",
-    ariaLabel: "教程导航",
-    children: guideItems,
-  },
+  { text: "教程", icon: "map", link: "/guide/00-overview.md" },
   {
     text: "实战案例",
     icon: "lightbulb",
     ariaLabel: "实战案例导航",
     children: recipeItems,
+  },
+  { text: "入口地图", icon: "layout", link: "/platform/" },
+  {
+    text: "教程目录",
+    icon: "book",
+    ariaLabel: "教程导航",
+    children: guideItems,
+  },
+  {
+    text: "交流群",
+    icon: "message",
+    ariaLabel: "交流群",
+    children: communityItems,
+  },
+  {
+    text: "赞助商",
+    icon: "star",
+    ariaLabel: "赞助商导航",
+    children: sponsorItems,
   },
   {
     text: "更多",
@@ -97,15 +103,10 @@ export default navbar([
     children: [
       { text: "配置", icon: "gear", link: "/configuration/" },
       { text: "资源", icon: "box", link: "/reference/" },
+      { text: "社区教程合集", icon: "book", link: "/community/tutorials.md" },
       { text: "教程", icon: "book", link: "/guide/01-app-installation.md" },
-      { text: "实战案例", icon: "lightbulb", link: "/recipes/" },
       { text: "交流群", icon: "message", link: "/community/roadmap.md" },
+      { text: "赞助商", icon: "star", link: "https://unity2.ai/register?source=canghe" },
     ],
-  },
-  {
-    text: "交流群",
-    icon: "message",
-    ariaLabel: "交流群",
-    children: communityItems,
   },
 ]);

@@ -135,7 +135,7 @@ export default sidebar({
       text: "社区共建",
       icon: "people",
       prefix: "/community/",
-      children: ["roadmap.md"],
+      children: ["tutorials.md", "roadmap.md"],
     },
   ],
 
@@ -155,6 +155,7 @@ export default sidebar({
         "/practice/",
         "/recipes/",
         "/reference/",
+        "/community/tutorials.md",
         "/community/roadmap.md",
       ],
     },

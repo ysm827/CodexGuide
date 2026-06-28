@@ -89,10 +89,6 @@
   position: relative;
 }
 
-.vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="更多导航"]) {
-  display: none;
-}
-
 .vp-dropdown-title {
   gap: 0.15rem;
 }
@@ -116,19 +112,6 @@
     display: none;
   }
 
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="更多导航"]) {
-    display: block;
-  }
-
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
-    display: none;
-  }
-}
-
-@media (max-width: 1520px) {
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]) {
-    display: none;
-  }
 }
 
 @media (max-width: 1400px) {
@@ -182,8 +165,7 @@
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="配置导航"]),
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="资源导航"]),
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="教程导航"]),
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]),
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]) {
     display: none !important;
   }
 
@@ -212,8 +194,7 @@
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="配置导航"]),
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="资源导航"]),
   .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="教程导航"]),
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]),
-  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="交流群"]) {
+  .vp-nav-links > .vp-nav-item:has(> .vp-dropdown-wrapper > .vp-dropdown-title[aria-label="实战案例导航"]) {
     display: none !important;
   }
 
@@ -557,6 +538,50 @@
 
 .home-loop-item[data-tone="rose"] {
   border-top: 3px solid #e11d48;
+}
+
+.community-tutorial-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.community-tutorial-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text);
+  text-decoration: none;
+}
+
+.community-tutorial-card:hover {
+  border-color: var(--vp-c-accent);
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+}
+
+.community-tutorial-card strong {
+  color: var(--vp-c-text);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.community-tutorial-card span {
+  margin-top: 0.6rem;
+  color: var(--vp-c-text-mute);
+  line-height: 1.75;
+}
+
+.community-tutorial-card em {
+  margin-top: 1rem;
+  color: var(--vp-c-accent);
+  font-size: 0.92rem;
+  font-style: normal;
+  line-height: 1.6;
 }
 
 .home-split {
