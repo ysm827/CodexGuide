@@ -3,8 +3,30 @@ import { defineClientConfig } from "vuepress/client";
 
 const analyticsHosts = new Set(["codexguide.ai", "www.codexguide.ai"]);
 
+const navbarDropdownLinks: Record<string, string> = {
+  快速上手导航: "/start/",
+  进阶教程导航: "/advanced/",
+  实战案例导航: "/recipes/",
+  参考手册导航: "/manual/",
+  社区共建: "/community/roadmap.html",
+};
+
 export default defineClientConfig({
   enhance: () => {
+    if (typeof window !== "undefined") {
+      document.addEventListener("click", (event) => {
+        if (event.detail === 0) return;
+
+        const target = event.target as Element | null;
+        if (target?.closest(".vp-dropdown")) return;
+
+        const button = target?.closest<HTMLButtonElement>(".vp-dropdown-title");
+        const link = button ? navbarDropdownLinks[button.getAttribute("aria-label") ?? ""] : null;
+
+        if (link) window.location.assign(link);
+      });
+    }
+
     if (
       import.meta.env.PROD &&
       typeof window !== "undefined" &&

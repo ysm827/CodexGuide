@@ -1,0 +1,46 @@
+---
+description: "CodexGuide 赞助商页面，集中展示支持本站建设的项目和服务。"
+permalink: /sponsors/
+---
+
+::: tip 最后核对
+赞助信息最后核对日期：2026-06-29。本页展示的赞助项目、价格、可用性、服务条款和售后政策请以赞助商官方页面为准；当前赞助入口为 [GetGPT Pro](https://getgpt.pro/i/codexguide)。
+:::
+
+# 赞助商
+
+感谢以下项目和服务支持 CodexGuide 的持续建设。赞助信息用于帮助读者了解相关服务，具体价格、可用性、服务条款和售后政策请以赞助商官方页面为准。
+
+<div class="sponsor-grid">
+  <a class="sponsor-card" href="https://getgpt.pro/i/codexguide" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.canghecode.com/codexguide/assets/sponsors/getgpt-pro.jpg" alt="GetGPT Pro" loading="lazy">
+    <strong>GetGPT Pro</strong>
+    <span>提供 ChatGPT、Claude 等 AI 订阅开通与充值服务，支持自助下单、快速到账与售后支持。</span>
+  </a>
+  <a class="sponsor-card" href="https://pptoken.cc/" target="_blank" rel="noopener noreferrer">
+    <img src="https://raw.githubusercontent.com/freestylefly/wesight/main/public/readme/sponsors/pptoken.png" alt="PPToken" loading="lazy">
+    <strong>PPToken</strong>
+    <span>提供 ChatGPT、Claude、Gemini 等主流 AI 模型 API 中转与密钥分发服务，支持低延迟、高可用、按量计费与订阅套餐。</span>
+  </a>
+  <a class="sponsor-card" href="https://ciyuan.today/" target="_blank" rel="noopener noreferrer">
+    <img src="https://raw.githubusercontent.com/freestylefly/wesight/main/public/readme/sponsors/ciyuan-api.jpg" alt="词元 API" loading="lazy">
+    <strong>词元 API</strong>
+    <span>面向开发者的一站式 AI 接口平台，提供稳定、低延迟、高可用的大模型 API 服务。</span>
+  </a>
+  <a class="sponsor-card" href="https://unity2.ai/register?source=canghe" target="_blank" rel="noopener noreferrer">
+    <strong>Unity2.ai</strong>
+    <span>社区赞助入口，更多服务信息请以赞助商官方页面为准。</span>
+  </a>
+  <a class="sponsor-card" href="https://payforchat.com/register?ref=XJKHTC7N" target="_blank" rel="noopener noreferrer">
+    <strong>PayForChat</strong>
+    <span>社区赞助入口，更多服务信息请以赞助商官方页面为准。</span>
+  </a>
+  <a class="sponsor-card" href="https://muskapi.com/register?utm_source=codexguide&utm_medium=website" target="_blank" rel="noopener noreferrer">
+    <strong>Muskapi</strong>
+    <span>社区赞助入口，更多服务信息请以赞助商官方页面为准。</span>
+  </a>
+</div>
+
+## 成为赞助商
+
+如果你希望支持 CodexGuide，可以通过交流群二维码联系维护者，并在备注中说明产品名称、官网链接和赞助说明。
