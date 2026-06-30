@@ -20,17 +20,15 @@
   ·
   <a href="https://codexguide.ai/">Read Online</a>
   ·
-  <a href="./docs/guide/00-overview.md">Learning Path</a>
+  <a href="./docs/guide/index.md">Learning Path</a>
   ·
-  <a href="./docs/platform/index.md">Entry Map</a>
+  <a href="./docs/start/00-index.md">Quick Start</a>
   ·
-  <a href="./docs/configuration/index.md">Configuration</a>
+  <a href="./docs/advanced/00-index.md">Advanced</a>
   ·
-  <a href="./docs/practice/index.md">Practice</a>
+  <a href="./docs/recipes/00-index.md">Recipes</a>
   ·
-  <a href="./docs/recipes/index.md">Recipes</a>
-  ·
-  <a href="./docs/reference/index.md">References</a>
+  <a href="./docs/manual/00-index.md">Manual</a>
   ·
   <a href="./docs/community/roadmap.md">Roadmap</a>
 </p>
@@ -50,7 +48,7 @@
 
 The GitHub README is a quick project overview. For actual learning, the website provides fuller navigation, search, sidebars, screenshots, setup maps, learning paths, and hands-on examples. Key pages are marked with review dates whenever possible, so you can decide when to verify details against official OpenAI sources.
 
-If you are new to Codex, start with the [Learning Path](https://codexguide.ai/guide/00-overview.html). If you already know whether you want CLI, Desktop App, Cloud, or IDE workflows, start from the [Entry Map](https://codexguide.ai/platform/).
+If you are new to Codex, start with the [Learning Path](https://codexguide.ai/guide/). If you already know whether you want CLI, Desktop App, Cloud, or IDE workflows, start from [Quick Start](https://codexguide.ai/start/) and [Advanced](https://codexguide.ai/advanced/).
 
 ## Vision
 
@@ -62,7 +60,7 @@ CodexGuide is a practical knowledge base for real tasks. It focuses on three que
 - **How to deliver**: how to describe work clearly so Codex can read projects, edit files, run commands, and return checkable results.
 - **How to retain learning**: how to turn one successful run into reusable templates, rules, cases, and safety boundaries.
 
-The guide is mainly written in Chinese today, but its audience is broader than Chinese-speaking developers. It also covers creators, researchers, product and operations teams, technical writers, team leads, and non-developer workflows that can benefit from Codex.
+The guide is mainly written in Chinese today, but its audience is broader than Chinese-speaking developers. It also covers creators, researchers, product and operations teams, technical writers, and team leads who can benefit from Codex.
 
 ## Who It's For
 
@@ -89,7 +87,7 @@ The guide is mainly written in Chinese today, but its audience is broader than C
 | Learning path | Installation, login, subscription, settings, mobile collaboration, and the first low-risk task |
 | Entry map | How to choose between Desktop App, CLI, Cloud, IDE, ChatGPT, and integrations |
 | Configuration | CLI options, `config.toml`, and project rule configuration |
-| Workflow practice | Task design, verification, non-development workflows, and team playbooks |
+| Workflow practice | Task design, verification, and team playbooks |
 | Recipes | PPT, Draw.io, browser, Obsidian, Feishu, Figma, Notion, CI fixes, and more |
 | Official references | OpenAI source material, GitHub repositories, and key fact links |
 
@@ -97,45 +95,41 @@ The guide is mainly written in Chinese today, but its audience is broader than C
 
 ### 1. First Time With Codex
 
-Read the [Learning Path](./docs/guide/00-overview.md), then continue with [Desktop App Download And Installation](./docs/guide/01-app-installation.md), [Plus / Pro Subscription](./docs/guide/02-subscribe-plus.md), [Desktop App Overview](./docs/guide/03-app-overview.md), and [First Task](./docs/guide/06-app-first-task.md).
+Read the [Learning Path](./docs/guide/index.md), then continue with [Desktop App Download And Installation](./docs/start/02-app-installation.md), [Plus / Pro Subscription](./docs/start/03-account-plan.md), [Desktop App Overview](./docs/start/05-app-overview.md), and [First Task](./docs/start/06-first-task.md).
 
 ### 2. Use Codex In A Real Project
 
-Start from [CLI Installation And Login](./docs/guide/13-cli-installation.md), then read [First Local Code Task](./docs/guide/14-cli-first-run.md), [AGENTS.md](./docs/guide/16-agents-md.md), and [Sandbox And Approvals](./docs/guide/17-sandbox-approvals.md).
+Start from [CLI Installation And Login](./docs/start/10-cli-installation.md), then read [First Local Code Task](./docs/start/11-cli-first-run.md), [AGENTS.md](./docs/advanced/02-agents-md.md), and [Sandbox And Approvals](./docs/advanced/07-sandbox-approvals.md).
 
 ### 3. Bring Codex Into A Team
 
-Start with the [Team Playbook](./docs/practice/team-playbook.md), then add [Configuration And Extensions](./docs/configuration/index.md), [Sandbox And Approvals](./docs/guide/17-sandbox-approvals.md), [Troubleshooting](./docs/guide/21-troubleshooting.md), and the [Recipe Library](./docs/recipes/index.md).
+Start with the [Team Playbook](./docs/advanced/10-team-playbook.md), then add the [Manual](./docs/manual/00-index.md), [Sandbox And Approvals](./docs/advanced/07-sandbox-approvals.md), [Troubleshooting](./docs/advanced/11-troubleshooting.md), and the [Recipe Library](./docs/recipes/00-index.md).
 
 ## Quick Links
 
 | Module | Use It For |
 | --- | --- |
-| [Learning Path](./docs/guide/00-overview.md) | Reading order from beginner use to team adoption |
-| [Entry Map](./docs/platform/index.md) | Choosing between CLI, Desktop App, Cloud/Web, IDE, and ChatGPT |
-| [Desktop App Download And Installation](./docs/guide/01-app-installation.md) | Downloading, installing, logging in, and preparing Codex Desktop App |
-| [Mobile Collaboration](./docs/guide/04-mobile-control-desktop.md) | Following desktop tasks from the Codex entry in the ChatGPT mobile app |
-| [First Codex Task](./docs/guide/06-app-first-task.md) | Picking a low-risk task and completing a verifiable change |
-| [CLI Installation And Login](./docs/guide/13-cli-installation.md) | Installing Codex CLI locally and signing in |
-| [First Local Code Task](./docs/guide/14-cli-first-run.md) | Running Codex CLI in a real repository |
-| [Configuration And Extensions](./docs/configuration/index.md) | CLI options, config.toml, and project rule configuration |
-| [Practice](./docs/practice/index.md) | Task design, non-development workflows, and team practice |
-| [AGENTS.md](./docs/guide/16-agents-md.md) | Writing project-level rules and collaboration boundaries for Codex |
-| [Sandbox And Approvals](./docs/guide/17-sandbox-approvals.md) | Safety boundaries for files, commands, network, credentials, and production resources |
-| [Cloud, IDE, And Desktop App](./docs/guide/19-cloud-ide-app.md) | Matching Codex entry points to work scenarios |
-| [Recipes](./docs/recipes/index.md) | Reusable task templates and retrospectives for real projects |
-| [Official References](./docs/reference/index.md) | OpenAI source material, GitHub repositories, and key links |
+| [Learning Path](./docs/guide/index.md) | Reading order from beginner use to team adoption |
+| [Quick Start](./docs/start/00-index.md) | Desktop App, account, first task, and task loop |
+| [Mobile Collaboration](./docs/start/09-mobile-control.md) | Following desktop tasks from the Codex entry in the ChatGPT mobile app |
+| [CLI Installation And Login](./docs/start/10-cli-installation.md) | Installing Codex CLI locally and signing in |
+| [First Local Code Task](./docs/start/11-cli-first-run.md) | Running Codex CLI in a real repository |
+| [Advanced](./docs/advanced/00-index.md) | CLI, IDE, Cloud, permissions, AGENTS.md, automation, and team practice |
+| [Manual](./docs/manual/00-index.md) | OpenAI source material, Codex updates, and references |
+| [AGENTS.md](./docs/advanced/02-agents-md.md) | Writing project-level rules and collaboration boundaries for Codex |
+| [Sandbox And Approvals](./docs/advanced/07-sandbox-approvals.md) | Safety boundaries for files, commands, network, credentials, and production resources |
+| [Cloud, IDE, And Desktop App](./docs/start/14-cloud.md) | Matching Codex entry points to work scenarios |
+| [Recipes](./docs/recipes/00-index.md) | Reusable task templates and retrospectives for real projects |
 
 ## Content Structure
 
 ```text
 CodexGuide
-├─ guide         # Practical guides from beginner use to team adoption
-├─ platform      # CLI, App, Cloud, IDE, and ChatGPT entry map
-├─ configuration # CLI options, config.toml, and project rule configuration
-├─ practice      # Task design, non-development workflows, team practice
-├─ recipes       # Reusable real-world examples
-├─ reference     # Official references and fact sources
+├─ guide         # Learning path
+├─ start         # Quick start
+├─ advanced      # Advanced tutorials
+├─ recipes       # Real-world examples
+├─ manual        # Official references and update notes
 └─ community     # Roadmap and contribution direction
 ```
 
@@ -171,7 +165,7 @@ The development server starts the VuePress documentation site. The production si
 
 [![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/CodexGuide&type=Date)](https://www.star-history.com/#freestylefly/CodexGuide&Date)
 
-## WeChat Official Account
+## Community
 
 Search **苍何** on WeChat or scan the QR code below. Reply with **codex交流群** to join the community group.
 

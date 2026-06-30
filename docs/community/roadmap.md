@@ -1,8 +1,12 @@
 ---
-description: "CodexGuide 共建路线图，记录文档站骨架、教程、案例、截图、关键词索引和社区传播的后续计划。"
+description: "CodexGuide 社区共建图，记录文档站骨架、教程、案例、截图、关键词索引和社区传播的后续计划。"
 ---
 
-# 共建路线图
+::: tip 最后核对
+社区资料最后核对日期：2026-06-29。本页是 CodexGuide 社区建设计划，Codex 官方功能和产品方向请以 [OpenAI Codex 产品页](https://openai.com/codex/) 与 [Codex 文档入口](https://developers.openai.com/codex/) 为准；仓库共建事项请以当前 issue、PR 和文档结构为准。
+:::
+
+# 社区共建图
 
 目标：把这个仓库做成面向全球初学者、创作者、开发者与团队的 Codex 实践知识库。
 

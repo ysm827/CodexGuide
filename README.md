@@ -20,19 +20,17 @@
   ·
   <a href="https://codexguide.ai/">在线阅读</a>
   ·
-  <a href="./docs/guide/00-overview.md">学习路线</a>
+  <a href="./docs/guide/index.md">学习路线</a>
   ·
-  <a href="./docs/platform/index.md">入口地图</a>
+  <a href="./docs/start/00-index.md">快速上手</a>
   ·
-  <a href="./docs/configuration/index.md">配置专题</a>
+  <a href="./docs/advanced/00-index.md">进阶教程</a>
   ·
-  <a href="./docs/practice/index.md">实践方法</a>
+  <a href="./docs/recipes/00-index.md">实战案例</a>
   ·
-  <a href="./docs/recipes/index.md">实战案例</a>
+  <a href="./docs/manual/00-index.md">参考手册</a>
   ·
-  <a href="./docs/reference/index.md">官方资料</a>
-  ·
-  <a href="./docs/community/roadmap.md">共建路线图</a>
+  <a href="./docs/community/roadmap.md">社区共建图</a>
 </p>
 
 > 从第一次上手，到把 Codex 接入真实工作流；帮助不同背景的人用 Codex 完成开发、创作、研究、自动化与团队协作。
@@ -50,7 +48,7 @@
 
 GitHub README 适合快速了解项目，真正学习时更推荐打开网站阅读：网站里有更完整的导航、搜索、侧边栏目录、截图、设置速查图、学习路线和实战案例。每篇关键资料都会尽量标注最后核对日期，方便你判断内容是否需要回到 OpenAI 官方资料重新确认。
 
-如果你正在第一次接触 Codex，可以直接从网站的 [学习路线](https://codexguide.ai/guide/00-overview.html) 开始；如果你已经知道自己要用 CLI、桌面 App、Cloud 或 IDE，可以先看 [入口地图](https://codexguide.ai/platform/)。
+如果你正在第一次接触 Codex，可以直接从网站的 [学习路线](https://codexguide.ai/guide/) 开始；如果你已经知道自己要用 CLI、桌面 App、Cloud 或 IDE，可以先看 [快速上手](https://codexguide.ai/start/) 和 [进阶教程](https://codexguide.ai/advanced/)。
 
 ## 项目愿景
 
@@ -89,7 +87,7 @@ CodexGuide 想做的不是命令速查表，而是一份面向真实任务的实
 | 入门路线 | 从安装、登录、订阅、设置、手机协同、API 连接到第一个低风险任务 |
 | 入口地图 | 解释桌面 App、CLI、Cloud、IDE、ChatGPT 和集成生态该怎么选 |
 | 配置专题 | 覆盖 CLI 选项、`config.toml` 和项目规则配置 |
-| 工作流方法 | 任务设计、验证方式、非开发工作流、团队 playbook |
+| 工作流方法 | 任务设计、验证方式、团队 playbook |
 | 实战案例 | PPT、Draw.io、浏览器、Obsidian、临床文献综述、飞书、Figma、Notion、CI 修复等场景 |
 | 官方资料索引 | 汇总 OpenAI 官方资料、GitHub 仓库和关键事实来源 |
 
@@ -97,48 +95,43 @@ CodexGuide 想做的不是命令速查表，而是一份面向真实任务的实
 
 ### 1. 第一次上手
 
-先读 [学习路线](./docs/guide/00-overview.md)，再完成 [桌面 App 下载与安装](./docs/guide/01-app-installation.md)、[订阅 Plus / Pro](./docs/guide/02-subscribe-plus.md)、[桌面 App 总览](./docs/guide/03-app-overview.md)、[连接第三方 API](./docs/guide/05-third-party-api.md) 和 [第一个任务](./docs/guide/06-app-first-task.md)。
+先读 [学习路线](./docs/guide/index.md)，再完成 [桌面 App 下载与安装](./docs/start/02-app-installation.md)、[订阅 Plus / Pro](./docs/start/03-account-plan.md)、[桌面 App 总览](./docs/start/05-app-overview.md) 和 [第一个任务](./docs/start/06-first-task.md)。
 
 ### 2. 想用 Codex 改真实项目
 
-从 [CLI 安装与登录](./docs/guide/13-cli-installation.md) 开始，接着看 [第一次让 Codex 改代码](./docs/guide/14-cli-first-run.md)、[AGENTS.md](./docs/guide/16-agents-md.md)、[沙盒与审批](./docs/guide/17-sandbox-approvals.md)。
+从 [CLI 安装与登录](./docs/start/10-cli-installation.md) 开始，接着看 [第一次让 Codex 改代码](./docs/start/11-cli-first-run.md)、[AGENTS.md](./docs/advanced/02-agents-md.md)、[沙盒与审批](./docs/advanced/07-sandbox-approvals.md)。
 
 ### 3. 想把 Codex 放进团队
 
-先看 [团队 playbook](./docs/practice/team-playbook.md)，再补齐 [配置与扩展](./docs/configuration/index.md)、[沙盒与审批](./docs/guide/17-sandbox-approvals.md)、[排障手册](./docs/guide/21-troubleshooting.md) 和 [实战案例库](./docs/recipes/index.md)。
+先看 [团队 playbook](./docs/advanced/10-team-playbook.md)，再补齐 [参考手册](./docs/manual/00-index.md)、[沙盒与审批](./docs/advanced/07-sandbox-approvals.md)、[排障手册](./docs/advanced/11-troubleshooting.md) 和 [实战案例库](./docs/recipes/00-index.md)。
 
 ## 快速入口
 
 | 模块 | 适合解决什么问题 |
 | --- | --- |
-| [学习路线](./docs/guide/00-overview.md) | 从入门、进阶到团队化的阅读顺序 |
-| [入口地图](./docs/platform/index.md) | CLI、桌面 App、Cloud/Web、IDE、ChatGPT 的选择方法 |
-| [桌面 App 下载与安装](./docs/guide/01-app-installation.md) | Codex 桌面 App 下载、安装、登录和基础准备 |
-| [手机端协同桌面任务](./docs/guide/04-mobile-control-desktop.md) | 用 ChatGPT 手机 App 中的 Codex 入口跟进桌面任务 |
-| [连接第三方 API](./docs/guide/05-third-party-api.md) | 比较手动配置、Codex++、CCX 与 CC Switch 三种接入方式 |
-| [第一次使用 Codex](./docs/guide/06-app-first-task.md) | 选择低风险任务，并完成一次可验证修改 |
-| [CLI 安装与登录](./docs/guide/13-cli-installation.md) | 在本地终端安装 Codex CLI 并完成登录 |
-| [第一次让 Codex 改代码](./docs/guide/14-cli-first-run.md) | 用 CLI 进入真实仓库，完成一次可检查的代码任务 |
-| [配置与扩展](./docs/configuration/index.md) | CLI 选项、config.toml 和项目规则配置 |
-| [实践方法](./docs/practice/index.md) | 任务设计、非开发工作流和团队实践 |
-| [AGENTS.md](./docs/guide/16-agents-md.md) | 给 Codex 编写项目级规则和协作边界 |
-| [沙盒与审批](./docs/guide/17-sandbox-approvals.md) | 文件、命令、网络、凭据和生产资源的安全边界 |
-| [自动线程管理](./docs/guide/18-thread-management.md) | 继续、分叉、移交和整理 Codex 任务 |
-| [Cloud、IDE 与桌面 App](./docs/guide/19-cloud-ide-app.md) | 不同 Codex 使用入口的适用场景 |
-| [实战案例库](./docs/recipes/index.md) | 可复制到真实项目的任务模板和复盘结构 |
-| [官方资料索引](./docs/reference/index.md) | OpenAI 官方资料、GitHub 仓库和关键链接 |
+| [学习路线](./docs/guide/index.md) | 从入门、进阶到团队化的阅读顺序 |
+| [快速上手](./docs/start/00-index.md) | 桌面 App、账号、首个任务和任务闭环 |
+| [手机端协同桌面任务](./docs/start/09-mobile-control.md) | 用 ChatGPT 手机 App 中的 Codex 入口跟进桌面任务 |
+| [CLI 安装与登录](./docs/start/10-cli-installation.md) | 在本地终端安装 Codex CLI 并完成登录 |
+| [第一次让 Codex 改代码](./docs/start/11-cli-first-run.md) | 用 CLI 进入真实仓库，完成一次可检查的代码任务 |
+| [进阶教程](./docs/advanced/00-index.md) | CLI、IDE、Cloud、权限、AGENTS.md、自动化和团队实践 |
+| [参考手册](./docs/manual/00-index.md) | OpenAI 官方资料、Codex 更新记录和参考来源 |
+| [AGENTS.md](./docs/advanced/02-agents-md.md) | 给 Codex 编写项目级规则和协作边界 |
+| [沙盒与审批](./docs/advanced/07-sandbox-approvals.md) | 文件、命令、网络、凭据和生产资源的安全边界 |
+| [自动线程管理](./docs/advanced/08-thread-management.md) | 继续、分叉、移交和整理 Codex 任务 |
+| [Cloud、IDE 与桌面 App](./docs/start/14-cloud.md) | 不同 Codex 使用入口的适用场景 |
+| [实战案例库](./docs/recipes/00-index.md) | 可复制到真实项目的任务模板和复盘结构 |
 
 ## 内容框架
 
 ```text
 CodexGuide
-├─ guide         # 从入门到团队化的实践指南
-├─ platform      # CLI、App、Cloud、IDE、ChatGPT 入口地图
-├─ configuration # CLI 选项、config.toml 和项目规则配置
-├─ practice      # 任务设计、非开发工作流、团队实践
-├─ recipes       # 可复用的真实工程案例
-├─ reference     # 官方资料索引与事实来源
-└─ community     # 共建路线图与贡献方向
+├─ guide         # 学习路线
+├─ start         # 快速上手
+├─ advanced      # 进阶教程
+├─ recipes       # 实战案例
+├─ manual        # 参考手册
+└─ community     # 社区共建图与贡献方向
 ```
 
 当前已搭建：
@@ -149,7 +142,7 @@ CodexGuide
 - Codex 多入口使用地图和选择建议。
 - Codex 配置与扩展专题。
 - 任务说明、提示词模板和验证方法。
-- 非开发工作流与团队实践方法。
+- 团队实践方法。
 - `AGENTS.md` 项目规则模板。
 - 沙盒、审批和安全边界说明。
 - Cloud、IDE、桌面 App、ChatGPT 使用场景对照。
@@ -188,7 +181,7 @@ pnpm build
 
 [![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/CodexGuide&type=Date)](https://www.star-history.com/#freestylefly/CodexGuide&Date)
 
-## 公众号
+## 社区共建
 
 微信搜索 **苍何** 或扫描下方二维码关注公众号。关注后回复 **codex交流群**，即可进入群交流。
 
@@ -216,7 +209,7 @@ pnpm build
 - 团队实践、模板和工作流。
 - 官方文档变更同步。
 
-请先阅读 [贡献指南](./CONTRIBUTING.md)。如果你还不确定怎么贡献，可以从 [Roadmap](./docs/community/roadmap.md) 或 `good first issue` 开始。
+请先阅读 [贡献指南](./CONTRIBUTING.md)。如果你还不确定怎么贡献，可以从 [社区共建图](./docs/community/roadmap.md) 或 `good first issue` 开始。
 
 ## 开源协议
 
