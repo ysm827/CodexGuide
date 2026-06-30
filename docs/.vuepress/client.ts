@@ -11,9 +11,28 @@ const navbarDropdownLinks: Record<string, string> = {
   社区共建: "/community/roadmap.html",
 };
 
+const legacySectionPaths: Record<string, string> = {
+  "/guide.html": "/guide",
+  "/start.html": "/start",
+  "/advanced.html": "/advanced",
+  "/recipes.html": "/recipes",
+  "/manual.html": "/manual",
+  "/sponsors.html": "/sponsors",
+};
+
+const redirectLegacySectionPath = (): void => {
+  const target = legacySectionPaths[window.location.pathname];
+
+  if (!target) return;
+
+  window.location.replace(`${target}${window.location.search}${window.location.hash}`);
+};
+
 export default defineClientConfig({
   enhance: () => {
     if (typeof window !== "undefined") {
+      redirectLegacySectionPath();
+
       document.addEventListener("click", (event) => {
         if (event.detail === 0) return;
 
