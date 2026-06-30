@@ -12,27 +12,39 @@ const navbarDropdownLinks: Record<string, string> = {
 };
 
 const legacySectionPaths: Record<string, string> = {
-  "/guide.html": "/guide",
-  "/start.html": "/start",
-  "/advanced.html": "/advanced",
-  "/recipes.html": "/recipes",
-  "/manual.html": "/manual",
-  "/sponsors.html": "/sponsors",
+  "/guide": "/guide/",
+  "/guide.html": "/guide/",
+  "/start": "/start/",
+  "/start.html": "/start/",
+  "/advanced": "/advanced/",
+  "/advanced.html": "/advanced/",
+  "/recipes": "/recipes/",
+  "/recipes.html": "/recipes/",
+  "/manual": "/manual/",
+  "/manual.html": "/manual/",
+  "/sponsors": "/sponsors/",
+  "/sponsors.html": "/sponsors/",
 };
 
-const redirectLegacySectionPath = (): void => {
+const normalizeLegacySectionPath = (): void => {
   const target = legacySectionPaths[window.location.pathname];
 
   if (!target) return;
 
-  window.location.replace(`${target}${window.location.search}${window.location.hash}`);
+  window.history.replaceState(
+    window.history.state,
+    "",
+    `${target}${window.location.search}${window.location.hash}`,
+  );
 };
+
+if (typeof window !== "undefined") {
+  normalizeLegacySectionPath();
+}
 
 export default defineClientConfig({
   enhance: () => {
     if (typeof window !== "undefined") {
-      redirectLegacySectionPath();
-
       document.addEventListener("click", (event) => {
         if (event.detail === 0) return;
 
